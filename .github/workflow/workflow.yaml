@@ -5,7 +5,7 @@ on:
     branches:
     - main
     paths:
-      - '**.tf'
+    - '**.tf'
     pull_request:
 jobs:
   terraform:
