@@ -5,8 +5,9 @@ on:
     branches:
     - main
     paths:
-    - '**.tf'
+      - '**.tf'
     pull_request:
+
 jobs:
   terraform:
     name: 'Terraform'
@@ -21,7 +22,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@vl
+      uses: hashicorp/setup-terraform@v1
 
     - name: Terraform Init
       run: terraform init 
