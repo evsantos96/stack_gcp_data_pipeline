@@ -5,6 +5,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
+    credentials = "${{ secrets.GOOGLE_CREDENTIALS }}"
     bucket = "stack-state-gcs-data-pipeline68752"
     prefix = "terraform/state"
   }
